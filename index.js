@@ -307,4 +307,101 @@ let posNeg = function(a,b){
 
 console.log(posNeg(-5,5))
 
+let threeUpper = function(string) {
 
+    let ciao = string.slice(0,3).toUpperCase()
+    console.log(ciao)
+    let ciao2 = string.slice(3,string.length).toLowerCase()
+    console.log(ciao2)
+    return ciao + ciao2
+
+}
+
+console.log(threeUpper("cia"))
+
+let strangeSummy = function(a,b) {
+    let sum =a+b
+
+    if (sum>=50&&sum<=80){
+
+        return 65
+
+
+    }
+    else{
+        return 80
+    }
+}
+
+let factor = function(num) {
+    let factorList = []
+    for(let i = 1; i <= num; i++) {
+
+        // check if number is a factor
+        if(num % i == 0) {
+            factorList.push(i)
+        }
+    }
+    console.log(factorList.length)
+    
+    if (factorList.length==2){
+        return "Diego"
+
+
+    }
+    else if (factorList.length==4){
+        return "Riccardo"
+
+
+    }
+    else if (factorList.length==6){
+        return "Stefano"
+
+
+    }
+
+    else if (factorList.length==7){
+        return "DiegoRiccardo"
+
+
+    }
+
+    else if (factorList.length==11){
+        return "RiccardoStefano"
+
+
+    }
+    else if (factorList.length==9){
+        return "DiegoStefano"
+
+
+    }
+    else {
+        return factorList[factorList.length-1]
+
+
+    }
+    
+
+
+
+
+
+}
+
+console.log(factor(15))
+
+let acro = function(string){
+    let acronimo = ""
+
+    let arr = string.split(" ")
+    console.log(arr)
+    for (i=0;i<arr.length;i++){
+        let ciao = arr[i].slice(0,1)
+        acronimo += ciao
+
+    }
+    return acronimo
+}
+
+console.log(acro("ciao come stai"))
